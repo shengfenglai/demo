@@ -1,4 +1,4 @@
-package com.nmtx.lsf.commons.lang3;
+package com.lsf.commons.lang3;
 
 import org.apache.commons.lang3.StringUtils;
 
