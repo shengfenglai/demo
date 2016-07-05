@@ -1,6 +1,7 @@
 package com.lsf.container;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListTest {
@@ -10,20 +11,21 @@ public class ArrayListTest {
     }
 
     public static void subListTest() {
-        int count = 1000;
-        int index = 0;
-        List<Integer> list = new ArrayList<Integer>();
-        for (int i = 0; i < count; i++) {
-            list.add(i + 1);
+        String str = "1,2,3,4,5,6,7,8,9,10";
+        String[] array = str.split(",");
+        List<String> list = new ArrayList<String>();
+        Collections.addAll(list, array);
+        List<List<String>> finalList = chopped(list, 3);
+        System.out.println(finalList.get(0));
+    }
+
+    static <T> List<List<T>> chopped(List<T> list, final int L) {
+        List<List<T>> parts = new ArrayList<List<T>>();
+        final int N = list.size();
+        for (int i = 0; i < N; i += L) {
+            parts.add(new ArrayList<T>(list.subList(i, Math.min(N, i + L))));
         }
-        for (int i = 0; i < 20; i++) {
-            List<Integer> temp = list.subList(index, index + count / 20);
-            index += count / 20;
-            System.out.println("the data of list " + (i + 1) + "===========>");
-            for (int j = 0; j < temp.size(); j++) {
-                System.out.println(temp.get(j));
-            }
-        }
+        return parts;
     }
 
 }
