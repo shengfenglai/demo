@@ -5,7 +5,7 @@ package com.lsf.exception;
  */
 public class NotFoundExceptionTest {
     public static void main(String[] args) throws NotFoundException {
-        if(null == null) {
+        if (null == null) {
             throw new NotFoundException("user not found");
         }
     }
