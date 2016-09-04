@@ -16,7 +16,7 @@ public class JsonPathTest {
 
         System.out.println();
 
-        // 输出全部author的值
+
         List<String> authors = JsonPath.read(json, "$.store.book[*].author");
         for (String auth : authors) {
             System.out.println(auth);
@@ -24,7 +24,7 @@ public class JsonPathTest {
 
         System.out.println();
 
-        // 输出book[*]中category == 'reference'的book
+
         List<Object> books = JsonPath.read(json, "$.store.book[?(@.category == 'reference')]");
         for (Object o : books) {
             System.out.println(o);
@@ -32,7 +32,7 @@ public class JsonPathTest {
 
         System.out.println();
 
-        // 输出book[*]中price>10的book
+
         List<Object> books2 = JsonPath.read(json, "$.store.book[?(@.price>10)]");
         for (Object o : books2) {
             System.out.println(o);
@@ -40,7 +40,7 @@ public class JsonPathTest {
 
         System.out.println();
 
-        // 输出book[*]中含有isbn元素的book
+
         List<Object> books3 = JsonPath.read(json, "$.store.book[?(@.isbn)]");
         for (Object o : books3) {
             System.out.println(o);
@@ -48,7 +48,7 @@ public class JsonPathTest {
 
         System.out.println();
 
-        // 输出该json中所有price的值
+
         List<Double> prices = JsonPath.read(json, "$..price");
         for (Double price : prices) {
             System.out.println(price);
