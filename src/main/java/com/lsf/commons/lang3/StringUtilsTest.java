@@ -35,5 +35,4 @@ public class StringUtilsTest {
     public static String testStringUtilsChop(String str) {
         return StringUtils.chop(str);
     }
-
 }
