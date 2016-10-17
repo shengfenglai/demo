@@ -11,7 +11,7 @@ public class NumberFormatException {
         System.out.println(getNum());
     }
 
-    public static  int getNum() {
+    public static int getNum() {
         int a = 0;
         try {
             String str = "test";
