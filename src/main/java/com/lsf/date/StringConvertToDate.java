@@ -8,6 +8,6 @@ import org.joda.time.DateTime;
 public class StringConvertToDate {
 
     public static void main(String[] args) {
-        System.out.println(new DateTime("2016-11-01").toDate());
+        System.out.println(new DateTime("2016-11-01T17:38:40").toDate());
     }
 }
