@@ -19,4 +19,6 @@ public class ProxyTest {
 
         System.out.println(subject.sayBye());
     }
+    
+    
 }

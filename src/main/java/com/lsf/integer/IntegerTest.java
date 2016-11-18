@@ -10,6 +10,7 @@ import java.util.Scanner;
  */
 public class IntegerTest {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
         while (scanner.hasNextInt()) {

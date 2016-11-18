@@ -5,6 +5,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 /**
  * Created by shengfeng on 2016/9/12.
  */
+@SuppressWarnings("unused")
 public class NumberFormatException {
 
     public static void main(String[] args) {
