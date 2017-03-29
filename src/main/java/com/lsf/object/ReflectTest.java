@@ -1,6 +1,5 @@
 package com.lsf.object;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -13,5 +12,7 @@ public class ReflectTest {
 
         Method m = str.getClass().getMethod("toUpperCase");
         System.out.println(m.invoke(str));
+
     }
+
 }
