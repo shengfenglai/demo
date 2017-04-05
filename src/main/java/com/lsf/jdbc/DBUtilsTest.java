@@ -121,3 +121,22 @@ public class DBUtilsTest {
     }
 
 }
+
+
+
+
+/*
+ *the sql of t_user
+
+create table t_user (
+    id int auto_increment primary key,
+    username varchar(15),
+    address varchar(60),
+    photo int,
+    create_time datetime,
+    update_time datetime
+);
+
+insert into t_user values (1,'shengfeng','shenzhen','http://img.shengfeng.com/test.png',now(),null);
+
+  */
