@@ -9,8 +9,13 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class DBUtilsTest {
 
+    public static String MYSQL_DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
+    public static String MYSQL_URL = "jdbc:mysql://localhost:3306/test";
+    public static String MYSQL_USERNAME = "root";
+    public static String MYSQL_PASSWORD = "root";
+
     public static void main(String[] args) throws SQLException {
-        
+
         Connection connection = getConnection();
         PreparedStatement preparedStatement = getPreparedStatement(connection, "select * from t_user limit 1");
         ResultSet resultSet = getResultSet(preparedStatement);
@@ -30,7 +35,7 @@ public class DBUtilsTest {
     // 用static静态代码块来注册驱动
     static {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName(MYSQL_DRIVER_CLASS_NAME);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -42,7 +47,7 @@ public class DBUtilsTest {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
+            connection = DriverManager.getConnection(MYSQL_URL, MYSQL_USERNAME, MYSQL_PASSWORD);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -121,22 +126,3 @@ public class DBUtilsTest {
     }
 
 }
-
-
-
-
-/*
- *the sql of t_user
-
-create table t_user (
-    id int auto_increment primary key,
-    username varchar(15),
-    address varchar(60),
-    photo int,
-    create_time datetime,
-    update_time datetime
-);
-
-insert into t_user values (1,'shengfeng','shenzhen','http://img.shengfeng.com/test.png',now(),null);
-
-  */
