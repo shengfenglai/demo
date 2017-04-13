@@ -12,5 +12,8 @@ public class StringTest {
         System.out.println(s1 == s2);
         System.out.println(s1 == s3);
         System.out.println(s1 == s1.intern());
+        System.out.println("jack".equals("jack"));
+        System.out.println("jack".equals(new String("jack")));
+        System.out.println("jack"=="jack");
     }
 }
