@@ -15,5 +15,6 @@ public class StringTest {
         System.out.println("jack".equals("jack"));
         System.out.println("jack".equals(new String("jack")));
         System.out.println("jack"=="jack");
+        System.out.println("just to test");
     }
 }
